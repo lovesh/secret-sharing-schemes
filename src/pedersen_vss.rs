@@ -89,7 +89,7 @@ impl PedersenVSS {
         bases.push(g.negation());
         bases.push(h.negation());
 
-        bases.multi_scalar_mul_var_time(&exp).unwrap().is_identity()
+        bases.multi_scalar_mul_var_time(exp.as_ref()).unwrap().is_identity()
     }
 }
 
